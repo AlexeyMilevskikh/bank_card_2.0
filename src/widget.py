@@ -1,4 +1,5 @@
 from .masks import get_mask_card_number, get_mask_account
+from datetime import datetime
 
 
 def mask_account_card(info: str) -> str:
@@ -23,22 +24,15 @@ def mask_account_card(info: str) -> str:
         # Если это не счет, предполагаем, что это карта
         masked_card = get_mask_card_number(number)
         return info.replace(number, masked_card)
+    return "Неверный формат информации"
 
 
-
-
-from datetime import datetime
-
-
-def get_date(date_str: str) -> str:
+def get_date(date_string: str) -> str:
     """
-    Преобразует строку с датой из формата ISO 8601 в формат "ДД.ММ.ГГГГ".
+    Преобразует строку даты в формат 'дд.мм.гггг'.
 
-    :param date_str: Дата в формате "2024-03-11T02:26:18.671407".
-    :return: Дата в формате "ДД.ММ.ГГГГ".
+    :param date_string: Дата в формате ISO 8601.
+    :return: Дата в формате 'дд.мм.гггг'.
     """
-    # Извлекаем строку даты
-    dt = datetime.fromisoformat(date_str)
-
-    # Форматируем дату в нужный формат
+    dt = datetime.fromisoformat(date_string)
     return dt.strftime("%d.%m.%Y")
