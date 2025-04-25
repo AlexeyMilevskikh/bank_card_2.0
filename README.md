@@ -6,7 +6,7 @@
 
 Для установки зависимостей используйте Poetry:
 
-```bash
+```bash 
 poetry install
 ```
 
