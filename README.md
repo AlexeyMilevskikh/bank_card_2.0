@@ -8,4 +8,5 @@
 
 ```bash
 poetry install
+```
 
