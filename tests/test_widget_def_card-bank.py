@@ -1,6 +1,8 @@
 import unittest
 from typing import List, Tuple
 
+import pytest
+
 from src.widget import mask_account_card
 
 
@@ -36,4 +38,4 @@ class TestWidget(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    pytest.main()

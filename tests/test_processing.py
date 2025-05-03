@@ -87,3 +87,6 @@ def test_sort_by_date_with_missing_key() -> None:
     ops = [{"id": 1}, {"id": 2}]  # Удаляем ключ date для теста
     with pytest.raises(KeyError):
         sort_by_date(ops)
+
+if __name__ == "__main__":
+    pytest.main()
