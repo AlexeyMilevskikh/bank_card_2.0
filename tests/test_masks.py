@@ -1,4 +1,5 @@
 import pytest
+
 from src.masks import get_mask_account, get_mask_card_number
 
 
@@ -28,6 +29,7 @@ def test_get_mask_card_number(card_number: int, expected: str) -> None:
 def test_get_mask_account(account_number: int, expected: str) -> None:
     """Тестирует маскирование номера счета."""
     assert get_mask_account(account_number) == expected
+
 
 if __name__ == "__main__":
     pytest.main()

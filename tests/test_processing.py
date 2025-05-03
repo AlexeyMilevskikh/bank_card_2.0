@@ -88,5 +88,6 @@ def test_sort_by_date_with_missing_key() -> None:
     with pytest.raises(KeyError):
         sort_by_date(ops)
 
+
 if __name__ == "__main__":
     pytest.main()
